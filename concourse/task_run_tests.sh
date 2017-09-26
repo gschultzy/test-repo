@@ -11,8 +11,19 @@ node --version
 nodejs --version
 npm --version
 
+# Install forever tool
+npm install forever -g
+
 # Setup node dependencies
 cd ci-project/
 npm install
 
-node app/server.js
+# Start web app
+forever start app/server.js
+forever list
+
+# Check connectivity
+curl http://localhost:3000
+
+
+# Run unit and intergartion tests
