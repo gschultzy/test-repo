@@ -10,10 +10,10 @@ ls -al ci-project/
 node --version
 nodejs --version
 npm --version
-forever 
+forever list
 
-# Install forever tool
-npm install forever -g
+# # Install forever tool
+# npm install forever -g
 
 # # Setup node dependencies
 # cd ci-project/
