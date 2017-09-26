@@ -30,3 +30,4 @@ curl http://localhost:3000
 
 
 # Run unit and intergartion tests
+npm test
