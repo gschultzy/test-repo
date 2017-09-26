@@ -21,6 +21,6 @@ run:
     ls -al
     cd ci-repo/concourse/
     ls -al
-    chmod -+ task_run_tests.sh
+    chmod +x task_run_tests.sh
     ls -al
     ./task_run_tests.sh
