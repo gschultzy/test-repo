@@ -21,7 +21,7 @@ resources:
     skip_cert_check: true
 
 jobs:
-- name: job-deploy-app
+- name: ci-project-web-app
   public: true
   serial: true
   plan:
