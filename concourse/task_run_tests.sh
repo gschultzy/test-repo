@@ -26,7 +26,8 @@ forever list
 
 # Check connectivity
 sleep 5
-curl http://localhost:3000
+# curl http://localhost:3000
+curl http://localhost:3001 # simulate failed connection
 
 
 # Run unit and intergartion tests
