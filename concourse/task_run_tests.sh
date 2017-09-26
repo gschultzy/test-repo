@@ -3,6 +3,6 @@
 set -e # fail fast
 set -x # print commands
 
-ls -al ci-repo/
+ls -al ci-repo/concourse
 ls -al ci-project/
 
