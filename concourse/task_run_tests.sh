@@ -3,6 +3,7 @@
 set -e # fail fast
 set -x # print commands
 
+# Show resource directories
 ls -al ci-repo/concourse
 ls -al ci-project/
 
@@ -11,24 +12,17 @@ node --version
 nodejs --version
 npm --version
 
-
-# Install forever tool
-npm install forever -g
-forever list
-
-# Setup node dependencies
+# Setup app dependencies
 cd ci-project/
 npm install
 
-# Start web app
+# Install forever tool and start web app in background
+npm install forever -g
 forever start app/server.js
 forever list
 
-# Check connectivity
+# Pause for server to app to start
 sleep 5
-# curl http://localhost:3000
-curl http://localhost:3001 # simulate failed connection
-
 
 # Run unit and intergartion tests
 npm test
