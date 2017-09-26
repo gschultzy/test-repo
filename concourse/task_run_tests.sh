@@ -25,6 +25,7 @@ forever start app/server.js
 forever list
 
 # Check connectivity
+sleep 5
 curl http://localhost:3000
 
 
