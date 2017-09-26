@@ -18,9 +18,5 @@ run:
   - |
     whoami
     env
-    ls -al
-    cd ci-repo/concourse/
-    ls -al
-    chmod +x task_run_tests.sh
-    ls -al
+    chmod +x ci-repo/concourse/task_run_tests.sh
     ./task_run_tests.sh
