@@ -8,6 +8,7 @@ image_resource:
 inputs:
 - name: ci-repo
 - name: ci-project
+  path: ci-project/
 
 run:
   # path: ci-repo/concourse/task_run_tests.sh
