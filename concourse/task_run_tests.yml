@@ -10,12 +10,12 @@ inputs:
 - name: ci-project
 
 run:
-  # path: ci-repo/concourse/task_run_tests.sh
-  path: sh
-  args:
-  - -exc
-  - |
-    whoami
-    env
-    ls -al
+  path: ci-repo/concourse/task_run_tests.sh
+  # path: sh
+  # args:
+  # - -exc
+  # - |
+  #   whoami
+  #   env
+  #   ls -al
     
