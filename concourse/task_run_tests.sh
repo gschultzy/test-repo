@@ -6,14 +6,14 @@ set -x # print commands
 # Connect to cf
 cf login -a $api -u $username -p $password -o $organization -s $space
 # open shh coonnection to app container
-cf ssh $appname --disable-pseudo-tty
-# Setup enviroment for testing
-export PATH=$PATH:/home/vcap/deps/0/node/bin/
-alias npm='node /home/vcap/deps/0/node/lib/node_modules/npm/bin/npm-cli.js'
-cd app/
-npm install --only=dev
-# Execute tests
-npm test
+cf ssh $appname -c "export PATH=$PATH:/home/vcap/deps/0/node/bin/ && alias npm='node /home/vcap/deps/0/node/lib/node_modules/npm/bin/npm-cli.js' && cd app/ && node --version && npm --version"
+# # Setup enviroment for testing
+# export PATH=$PATH:/home/vcap/deps/0/node/bin/
+# alias npm='node /home/vcap/deps/0/node/lib/node_modules/npm/bin/npm-cli.js'
+# cd app/
+# npm install --only=dev
+# # Execute tests
+# npm test
 
 
 
