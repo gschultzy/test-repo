@@ -13,12 +13,12 @@ inputs:
   # path: ci-project/
 
 run:
-  path: ci-repo/concourse/task_run_tests.sh
-  # path: sh
-  # args:
-  # - -exc
-  # - |
-  #   whoami
-  #   env
-  #   chmod +x ci-repo/concourse/task_run_tests.sh
-  #   ci-repo/concourse/task_run_tests.sh
+  # path: ci-repo/concourse/task_run_tests.sh
+  path: sh
+  args:
+  - -exc
+  - |
+    whoami
+    env
+    chmod +x ci-repo/concourse/task_run_tests.sh
+    ci-repo/concourse/task_run_tests.sh
