@@ -16,8 +16,8 @@ cf login -a $api -u $username -p $password -o $organization -s $space
 # npm test"
 
 # open shh coonnection to app container
-cf ssh $appname -c "set -x && 
-set -e && 
+cf ssh $appname -c "set -e && 
+set -x && 
 export PATH=$PATH:/home/vcap/deps/0/node/bin/ && 
 alias npm='node /home/vcap/deps/0/node/lib/node_modules/npm/bin/npm-cli.js' && 
 cd app/ && 
