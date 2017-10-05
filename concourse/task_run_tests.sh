@@ -4,6 +4,7 @@ set -e # fail fast
 # set -x # print commands
 
 # Connect to cf
+
 cf login -a $api -u $username -p $password -o $organization -s $space
 
 # open shh coonnection to app container
@@ -15,7 +16,8 @@ cf login -a $api -u $username -p $password -o $organization -s $space
 # npm install --only=dev && 
 # npm test"
 
-# open shh coonnection to app container
+# open shh connection to app container
+echo "Connecting to $appname ..."
 cf ssh $appname -c "set -e && 
 set -x && 
 export PATH=$PATH:/home/vcap/deps/0/node/bin/ && 
