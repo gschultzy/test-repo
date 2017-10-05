@@ -5,6 +5,7 @@ set -x # print commands for debugging
 
 
 ls -l ci-project/
+grep 'name:' ci-project/manifest.yml | awk '{print $3}'
 
 # # Connect to cf
 # cf login -a $api -u $username -p $password -o $organization -s $space
