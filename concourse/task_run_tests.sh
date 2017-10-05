@@ -7,7 +7,7 @@ uname -a
 pwd
 
 # cf-space: object from credentials file
-echo $CF-SPACE
+echo $greg
 
 
 # # Show resource directories
