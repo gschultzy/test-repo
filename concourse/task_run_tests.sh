@@ -1,10 +1,20 @@
 #!/bin/bash
 
 set -e # fail fast
-set -x # print commands
+# set -x # print commands
 
 # Connect to cf
 cf login -a $api -u $username -p $password -o $organization -s $space
+
+# open shh coonnection to app container
+# cf ssh $appname -c "set -x && 
+# set -e && 
+# export PATH=$PATH:/home/vcap/deps/0/node/bin/ && 
+# alias npm='node /home/vcap/deps/0/node/lib/node_modules/npm/bin/npm-cli.js' && 
+# cd app/ && 
+# npm install --only=dev && 
+# npm test"
+
 # open shh coonnection to app container
 cf ssh $appname -c "set -x && 
 set -e && 
