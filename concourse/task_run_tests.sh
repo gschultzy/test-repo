@@ -1,30 +1,23 @@
 #!/bin/bash
 
 set -e # fail fast
-# set -x # print commands
+set -x # print commands for debugging
 
-# Connect to cf
 
-cf login -a $api -u $username -p $password -o $organization -s $space
+ls -l ci-project/
 
-# open shh coonnection to app container
-# cf ssh $appname -c "set -x && 
-# set -e && 
+# # Connect to cf
+# cf login -a $api -u $username -p $password -o $organization -s $space
+
+# # open shh connection to app container
+# echo "Connecting to $appname ..."
+# cf ssh $appname -c "set -e && 
+# set -x && 
 # export PATH=$PATH:/home/vcap/deps/0/node/bin/ && 
 # alias npm='node /home/vcap/deps/0/node/lib/node_modules/npm/bin/npm-cli.js' && 
 # cd app/ && 
 # npm install --only=dev && 
 # npm test"
-
-# open shh connection to app container
-echo "Connecting to $appname ..."
-cf ssh $appname -c "set -e && 
-set -x && 
-export PATH=$PATH:/home/vcap/deps/0/node/bin/ && 
-alias npm='node /home/vcap/deps/0/node/lib/node_modules/npm/bin/npm-cli.js' && 
-cd app/ && 
-npm install --only=dev && 
-npm test"
 
 # cf ssh greg_test -c "set -x && set -e && export PATH=$PATH:/home/vcap/deps/0/node/bin/ && alias npm='node /home/vcap/deps/0/node/lib/node_modules/npm/bin/npm-cli.js' && cd app/ && npm install --only=dev && npm test"
 

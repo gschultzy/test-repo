@@ -9,7 +9,7 @@ image_resource:
 
 inputs:
 - name: ci-repo
-# - name: ci-project
+- name: ci-project
   # path: ci-project/
 
 # params:
