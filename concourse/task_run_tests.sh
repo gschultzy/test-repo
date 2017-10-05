@@ -3,26 +3,33 @@
 set -e # fail fast
 set -x # print commands
 
-# Show resource directories
-ls -al ci-repo/concourse
-ls -al ci-project/
+uname -a
+pwd
 
-# Check node and npm versions
-node --version
-nodejs --version
-npm --version
+# cf-space: object from credentials file
+echo $cf-space
 
-# Setup app dependencies
-cd ci-project/
-npm install
 
-# Install forever tool and start web app in background
-npm install forever -g
-forever start app/server.js
-forever list
+# # Show resource directories
+# ls -al ci-repo/concourse
+# ls -al ci-project/
 
-# Pause for server to app to start
-sleep 5
+# # Check node and npm versions
+# node --version
+# nodejs --version
+# npm --version
 
-# Run unit and intergartion tests
-npm test
+# # Setup app dependencies
+# cd ci-project/
+# npm install
+
+# # Install forever tool and start web app in background
+# npm install forever -g
+# forever start app/server.js
+# forever list
+
+# # Pause for server to app to start
+# sleep 5
+
+# # Run unit and intergartion tests
+# npm test
