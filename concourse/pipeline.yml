@@ -30,6 +30,14 @@ jobs:
     trigger: true
   - task: web-app-tests
     file: ci-repo/concourse/task_run_tests.yml
+    params:
+      api: {{cf-api}}
+      username: {{cf-username}}
+      password: {{cf-password}}
+      organization: {{cf-organization}}
+      space: {{cf-space}}
+      skip_cert_check: true
+
   # - put: resource-deploy-web-app
   #   params:
   #     manifest: ci-project/manifest.yml

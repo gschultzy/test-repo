@@ -4,7 +4,7 @@ set -e # fail fast
 set -x # print commands
 
 # cf-space: object from credentials file
-echo $greg
+echo $username
 
 
 # # Show resource directories
