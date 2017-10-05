@@ -3,8 +3,18 @@
 set -e # fail fast
 set -x # print commands
 
-# cf-space: object from credentials file
-echo $username
+# Connect to cf
+cf login -a $api -u $username -p $password -o $organization -s $space
+# open shh coonnection to app container
+cf ssh $appname
+# Setup enviroment for testing
+export PATH=$PATH:/home/vcap/deps/0/node/bin/
+alias npm='node /home/vcap/deps/0/node/lib/node_modules/npm/bin/npm-cli.js'
+cd app/
+npm install --only=dev
+# Execute tests
+npm test
+
 
 
 # # Show resource directories

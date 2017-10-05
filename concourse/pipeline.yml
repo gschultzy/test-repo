@@ -37,6 +37,7 @@ jobs:
       organization: {{cf-organization}}
       space: {{cf-space}}
       skip_cert_check: true
+      appname: {{app-name}}
 
   # - put: resource-deploy-web-app
   #   params:
