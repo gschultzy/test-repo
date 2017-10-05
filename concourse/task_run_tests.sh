@@ -3,9 +3,6 @@
 set -e # fail fast
 set -x # print commands
 
-uname -a
-pwd
-
 # cf-space: object from credentials file
 echo $greg
 
